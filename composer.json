@@ -22,7 +22,7 @@
         "map": [
             ["app/code/local/Edge/Showcase", "app/code/local/Edge/Showcase"],
             ["app/design/frontend/edge/default/layout/showcase.xml", "app/design/frontend/edge/default/layout/showcase.xml"],
-            ["app/design/frontend/edge/default/template/showcase", "app/design/frontend/edge/defeault/template/showcase"],
+            ["app/design/frontend/edge/default/template/showcase", "app/design/frontend/edge/default/template/showcase"],
             ["app/etc/modules/Edge_Showcase.xml", "app/etc/modules/Edge_Showcase.xml"],
             ["skin/frontend/edge/default/css/showcase.css", "skin/frontend/edge/default/css/showcase.css"]
         ]

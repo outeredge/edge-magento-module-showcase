@@ -6,7 +6,7 @@
                 <showcase translate="title" module="edge_showcase">
                     <title>Showcase</title>
                     <sort_order>7</sort_order>
-                    <action>adminhtml/showcase/index</action>
+                    <action>adminhtml/adminhtml_showcase/index</action>
                 </showcase>
             </children>
         </cms>
