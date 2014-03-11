@@ -1,0 +1,21 @@
+{
+    "name": "outeredge/edge-magento-module-showcase",
+    "type": "magento-module",
+    "description": "Product Showcase Magento Module by outer/edge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "outer/edge",
+            "email": "hello@outeredgeuk.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:outeredge/edge-magento-module-showcase.git"
+        }
+    ]
+}
