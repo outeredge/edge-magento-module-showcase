@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <cms>
+            <children>
+                <showcase translate="title" module="edge_showcase">
+                    <title>Showcase</title>
+                    <sort_order>7</sort_order>
+                    <action>adminhtml/showcase/index</action>
+                </showcase>
+            </children>
+        </cms>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <cms>
+                        <children>
+                            <showcase translate="title">
+                                <title>Showcase</title>
+                                <sort_order>7</sort_order>
+                            </showcase>
+                        </children>
+                    </cms>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

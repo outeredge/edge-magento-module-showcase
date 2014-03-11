@@ -5,4 +5,72 @@
             <version>1.0.0</version>
         </Edge_Showcase>
     </modules>
+    <global>
+        <blocks>
+            <showcase>
+                <class>Edge_Showcase_Block</class>
+            </showcase>
+        </blocks>
+        <models>
+            <showcase>
+                <class>Edge_Showcase_Model</class>
+                <resourceModel>showcase_resource</resourceModel>
+            </showcase>
+            <showcase_resource>
+                <class>Edge_Showcase_Model_Resource</class>
+                <entities>
+                    <showcase>
+                        <table>edge_showcase</table>
+                    </showcase>
+                </entities>
+            </showcase_resource>
+        </models>
+        <helpers>
+            <edge_showcase>
+                <class>Edge_Showcase_Helper</class>
+            </edge_showcase>
+        </helpers>
+        <resources>
+            <showcase_setup>
+                <setup>
+                    <module>Edge_Showcase</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </showcase_setup>
+        </resources>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <anniehaak>
+                    <file>showcase.xml</file>
+                </anniehaak>
+            </updates>
+        </layout>
+        <routers>
+            <showcase>
+                <use>standard</use>
+                <args>
+                    <module>Edge_Showcase</module>
+                    <frontName>showcase</frontName>
+                </args>
+            </showcase>
+        </routers>
+    </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Edge_Showcase after="Mage_Adminhtml">Edge_Showcase</Edge_Showcase>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>

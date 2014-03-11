@@ -1,0 +1,26 @@
+<?php $article = $this->getArticle() ?>
+<?php $previous = $this->getPreviousArticle(); ?>
+<?php $next = $this->getNextArticle(); ?>
+
+<div class="line">
+    <h1><?php echo $article->getTitle(); ?></h1>
+</div>
+<div class="row text-center">
+    <div class="two columns text-left">
+        <?php if ($next): ?>
+        <a href="/<?php echo $next->getUrlKey() ?>" title="<?php echo $next->getTitle() ?>">Newer</a>
+        <?php endif; ?>
+    </div>
+    <p class="eight columns"><?php echo $article->getDescription() ?></p>
+    <div class="two columns text-right">
+        <?php if ($previous): ?>
+        <a href="/<?php echo $previous->getUrlKey() ?>" title="<?php echo $previous->getTitle() ?>">Older</a>
+        <?php endif; ?>
+    </div>
+</div>
+<article class="row">
+    <div class="eight columns">
+        <img src="<?php echo $this->getImage($article->getImage()) ?>" title="<?php echo $article->getTitle() ?>" />
+    </div>
+    <?php echo $this->getChildHtml('showcaseProducts') ?>
+</article>

@@ -1,0 +1,34 @@
+<?php $articles = $this->getArticles() ?>
+<div class="line">
+    <h1><?php echo $this->__('The Showcase'); ?></h1>
+</div>
+<div class="row text-center">
+    <p>Annie Haak regularly appear in the Showcase. Here is a selection of our recent features.</p>
+    <div class="showcase-select margin-bottom-20">
+        <h2 class="no-margin"><?php echo $this->getCurrentDateRage() ?></h2>
+        <ul>
+            <?php foreach ($this->getDateOptions() as $key => $value): ?>
+                <li><a href="<?php echo $key ?>"><?php echo $value ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <?php if (count($articles)): ?>
+        <ul class="clearfix showcase-grid">
+        <?php foreach ($articles as $article): ?>
+            <li class="grid-item">
+                <a href="/<?php echo $article->getUrlKey(); ?>" class="">
+                    <div class="hover-button">
+                        <h2><?php echo $article->getTitle() ?></h2>
+                        <p>tell me more</p>
+                    </div>
+                    <img src="<?php echo $this->getImage($article->getThumbnail()) ?>" width="280" height="280" />
+                </a>
+            </li>
+        <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p class="text-center h1">Sorry, there are no articles available for this date range.</p>
+    <?php endif; ?>
+</div>

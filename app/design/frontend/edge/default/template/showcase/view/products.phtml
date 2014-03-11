@@ -1,0 +1,17 @@
+<div class="columns four vertical-prodct-list">
+<?php foreach ($this->getProducts() as $_product): ?>
+    <?php $product = Mage::getModel('catalog/product')->load($_product->getEntityId()); ?>
+    <article class="row">
+        <a href="<?php echo $product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($product->getName()) ?>" class="product-image five columns phone-one" onclick="trackGoogleEvent('Showcase Product Clickthrough', '<?php echo $this->jsQuoteEscape($this->stripTags($product->getSku(), null, true)) ?>')">
+            <img src="<?php echo $this->helper('catalog/image')->init($product, 'small_image')->resize(120) ?>" width="120" height="120" alt="<?php echo $this->htmlEscape($product->getName()) ?>" class="left" />
+        </a>
+        <div class="seven columns phone-three">
+            <h4 class="h3"><a href="<?php echo $product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($product->getName()) ?>" onclick="trackGoogleEvent('Showcase Product Clickthrough', '<?php echo $this->jsQuoteEscape($this->stripTags($product->getSku(), null, true)) ?>')">
+                <?php echo $this->htmlEscape($product->getName()) ?></a>
+            </h4>
+            <?php echo $this->getPriceHtml($product, true) ?>
+            <?php echo Mage::helper('productlabel')->getFirstLabel($product) ?>
+        </div>
+    </article>
+<?php endforeach; ?>
+</div>
