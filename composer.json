@@ -17,10 +17,5 @@
             "type": "vcs",
             "url": "git@github.com:outeredge/edge-magento-module-showcase.git"
         }
-    ],
-    "extra": {
-        "map": [
-            ["app/code/local/Edge/Showcase", "app/code/local/Edge/Showcase"]
-        ]
-    }
+    ]
 }
