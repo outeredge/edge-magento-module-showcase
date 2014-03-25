@@ -46,9 +46,9 @@
     <frontend>
         <layout>
             <updates>
-                <anniehaak>
+                <showcase>
                     <file>showcase.xml</file>
-                </anniehaak>
+                </showcase>
             </updates>
         </layout>
         <routers>
