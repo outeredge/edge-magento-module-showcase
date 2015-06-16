@@ -132,7 +132,7 @@ class Edge_Showcase_Adminhtml_ShowcaseController extends Mage_Adminhtml_Controll
 
         if (isset($_FILES[$name]) && (file_exists($_FILES[$name]['tmp_name']))){
             try {
-                $uploader = new Varien_File_Uploader($name);
+                $uploader = new Mage_Core_Model_File_Uploader($name);
                 $image = $uploader->setAllowedExtensions(array('jpg','jpeg','gif','png'))
                     ->setAllowRenameFiles(true)
                     ->setFilesDispersion(true)
